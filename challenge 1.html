@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Life Path Number</title>
+    </head>
+    <body align="center">
+    <h3>Life Path Number</h3>
+    <div align="center">
+        <table>
+        <tr>
+        <td>Select your Birth date: </td>
+        <td><input type="date" id="Birth"/></td>
+        </tr>
+        <tr>
+        <th colspan="2"><br>
+        <button class="btn" onclick="calculate()">Check</button>
+        </th>
+        </tr>
+        </table>
+    </div>
+    <script>
+            function calculate() {
+            let m=document.getElementById("Birth").value;
+                let res=m.split('-');
+                let n=res.join('');
+                let sum=parseInt(n[0])+parseInt(n[1])+parseInt(n[2])+parseInt(n[3])+
+                          parseInt(n[4])+parseInt(n[5])+parseInt(n[6])+parseInt(n[7]);   
+                let num=parseInt(sum);
+                let cal=0;
+                while(num>0) {
+                    let rem=num%10;
+                    cal+=rem;
+                    num=Math.floor(num/10);
+                    if(cal>9) {
+                        num=cal;
+                        cal=0;
+                    }
+                }
+            alert("Life Path Number is: "+cal);
+            }
+    </script>
+    </body>  
+</html>
