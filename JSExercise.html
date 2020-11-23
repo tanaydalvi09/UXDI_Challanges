@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h2>Sign Up</h2>
+</head>
+<body align="center">
+    <form id="signupform" name="signform" onsubmit="return validate()">
+        <input type="text" name="fName" placeholder="Full Name" class="signup-field">
+        <input type="text" name="uName" placeholder="User Name" class="signup-field">
+        <input type="text" name="pass" placeholder="Password" class="signup-field"><br><br>
+        <input type="submit" value="Sign Up" class="signup-submit"> 
+    </form>
+    <style>
+                
+html {
+  height: 50%;
+}
+body {
+  height: 100%;
+  font-family: Arial;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #ffffff;
+  
+}
+ 
+.signup-field {
+  width:60%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+}
+.signup-submit {
+  background-color: #2ec554;
+  color: white;
+  padding: 12px 10px;
+  margin: 8px 0;
+  width: 20%;
+  align-content: center;
+}
+    </style>
+    <script>
+        function validate(){
+            let fName = document.signform.fName.value;
+            let uName = document.signform.uName.value;
+            if (fName==null || fName==""){  
+            alert("Full Name can't be blank");
+            return false;
+            }else if (uName==null || uName==""){  
+            alert("User Name can't be blank");
+  return false;  
+}
+        }
+    </script>
+</body>
+</html>
